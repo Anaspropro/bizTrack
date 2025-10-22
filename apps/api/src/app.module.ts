@@ -7,6 +7,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 // import { SalesModule } from './modules/sales/sales.module';
 // import { AuthModule } from './modules/auth/auth.module';
 // import { UsersModule } from './modules/users/users.module';
+import { UserModule } from './user/user.module';
+import { AuthInventorySalesCustomerAnalyticsPaymentsSettingsModule } from './auth-inventory-sales-customer-analytics-payments-settings/auth-inventory-sales-customer-analytics-payments-settings.module';
+import { AuthModule } from './inventory/auth/auth.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { InventoryModule } from './modules/inventory/inventory.module';
+import { SalesModule } from './modules/sales/sales.module';
+import { AnalyticsModule } from './modules/analytics/analytics.module';
+import { PaymentsModule } from './modules/payments/payments.module';
+import { SettingsModule } from './modules/settings/settings.module';
 
 @Module({
   imports: [
@@ -30,6 +39,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         },
       }),
     }),
+    UserModule,
+    AuthInventorySalesCustomerAnalyticsPaymentsSettingsModule,
+    AuthModule,
+    InventoryModule,
+    SalesModule,
+    AnalyticsModule,
+    PaymentsModule,
+    SettingsModule,
     // AuthModule,
     // UsersModule,
     // InventoryModule,
