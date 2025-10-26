@@ -1,15 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-// import { CacheModule } from '@nestjs/cache-manager';
-// import { User } from './shared/entities/user.entity';
-// import { InventoryModule } from './modules/inventory/inventory.module';
-// import { SalesModule } from './modules/sales/sales.module';
-// import { AuthModule } from './modules/auth/auth.module';
-// import { UsersModule } from './modules/users/users.module';
-import { UserModule } from './user/user.module';
-import { AuthInventorySalesCustomerAnalyticsPaymentsSettingsModule } from './auth-inventory-sales-customer-analytics-payments-settings/auth-inventory-sales-customer-analytics-payments-settings.module';
-import { AuthModule } from './inventory/auth/auth.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { InventoryModule } from './modules/inventory/inventory.module';
 import { SalesModule } from './modules/sales/sales.module';
@@ -39,18 +30,12 @@ import { SettingsModule } from './modules/settings/settings.module';
         },
       }),
     }),
-    UserModule,
-    AuthInventorySalesCustomerAnalyticsPaymentsSettingsModule,
     AuthModule,
     InventoryModule,
     SalesModule,
     AnalyticsModule,
     PaymentsModule,
     SettingsModule,
-    // AuthModule,
-    // UsersModule,
-    // InventoryModule,
-    // SalesModule,
   ],
 })
 export class AppModule {}
