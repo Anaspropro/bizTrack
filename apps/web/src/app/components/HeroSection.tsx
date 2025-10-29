@@ -15,7 +15,7 @@ const HeroSection = () => {
   return (
     <Section padding='md' className='bg-secondary/40'>
       <Container>
-        <div className='grid grid-cols-3'>
+        <div className='grid grid-cols-3 space-y-5'>
           {/* Content Section */}
           <div className='max-w-4xl mx-auto mb-12 relative col-span-2' data-aos="fade-left">
             {/* Badge */}
@@ -54,7 +54,7 @@ const HeroSection = () => {
           {/* focal point */}
           <div className='col-span-1 rounded-lg bg-primaary shadow-xl'>
             <Image 
-              src='/logo.png'
+              src=''
               alt='Image'
               width={100}
               height={100}
