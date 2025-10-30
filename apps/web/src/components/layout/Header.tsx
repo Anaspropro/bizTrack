@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   }
 
   return (
-    <header className={cn('bg-white border-b-2 border-secondary shadow-sm sticky top-0 z-50', className)}>
+    <header className={cn('border-b-2 border-gray-800 bg-white shadow-sm sticky top-0 z-50', className)}>
       {/* Mobile  Menu */}
       {isMobileMenuOpen && (
         <div 

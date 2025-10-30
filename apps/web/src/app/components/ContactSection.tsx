@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Typography, Button } from '@/components/ui'
+import { Container, Typography, Button, Section } from '@/components/ui'
 import { Mail, Phone, MapPin, MessageCircle, Send } from 'lucide-react'
 
 const ContactSection = () => {
@@ -31,7 +31,7 @@ const ContactSection = () => {
   ]
 
   return (
-    <section className='py-16 md:py-24 bg-secondary'>
+    <Section className='py-16 md:py-24 bg-muted/40'>
       <Container>
         {/* Header */}
         <div className='text-center mb-16'>
@@ -155,7 +155,7 @@ const ContactSection = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   )
 }
 

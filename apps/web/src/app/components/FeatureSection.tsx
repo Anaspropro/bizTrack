@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Typography } from '@/components/ui'
+import { Card, Container, Section, SectionHeader, Typography } from '@/components/ui'
 import { 
   ShoppingCart, 
   Package, 
@@ -64,62 +64,59 @@ const FeatureSection = () => {
   ]
 
   return (
-    <section className='py-16 md:py-24 bg-white'>
-      <Container>
-        {/* Header */}
-        <div className='text-center mb-16'>
-          <Typography variant='h2' className='mb-4'>
-            Everything You Need to Run Your Business
-          </Typography>
-          <Typography variant='lead' className='max-w-2xl mx-auto text-gray-600'>
-            Comprehensive tools designed specifically for Nigerian SMEs to streamline operations and boost productivity.
-          </Typography>
-        </div>
-
-        {/* Features Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-          {features.map((feature, index) => {
-            const IconComponent = feature.icon
-            return (
-              <div 
-                key={index}
-                className='group relative bg-white p-6 rounded-xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all duration-300'
+    <Section padding='lg' className="bg-muted/40">
+      <SectionHeader
+        title="Everything You Need to Run Your Business"
+        subtitle="Comprehensive tools designed specifically for Nigerian SMEs to streamline operations and boost productivity."
+        titleClassName='text-primary'
+        data-aos='fade-up'
+      />
+      
+      {/* Features Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map((feature, index) => {
+          const IconComponent = feature.icon;
+          return (
+            <Card
+              key={index}
+              className="group bg-primary/9 relative p-6 rounded-xl border hover:border-primary/80 border-primary/20 hover:shadow-lg transition-all duration-300"
+            >
+              {/* Icon */}
+              <div
+                className={`w-14 h-14 rounded-lg bg-linear-to-br ${feature.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
               >
-                {/* Icon */}
-                <div className={`w-14 h-14 rounded-lg bg-linear-to-br ${feature.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className='h-7 w-7 text-white' />
-                </div>
-
-                {/* Content */}
-                <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                  {feature.title}
-                </h3>
-                <p className='text-gray-600 text-sm leading-relaxed'>
-                  {feature.description}
-                </p>
-
-                {/* Hover Effect */}
-                <div className='absolute inset-0 rounded-xl bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10' />
+                <IconComponent className="h-7 w-7 text-white" />
               </div>
-            )
-          })}
-        </div>
 
-        {/* CTA */}
-        <div className='mt-16 text-center'>
-          <Typography variant='body' className='text-gray-600 mb-6'>
-            Ready to transform your business operations?
-          </Typography>
-          <a 
-            href='/register' 
-            className='inline-flex items-center justify-center px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-200'
-          >
-            Start Free Trial
-          </a>
-        </div>
-      </Container>
-    </section>
-  )
+              {/* Content */}
+              <h3 className="text-lg font-semibold text-primary mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-blue-900 text-sm leading-relaxed">
+                {feature.description}
+              </p>
+
+              {/* Hover Effect */}
+              <div className="absolute inset-0 rounded-xl bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+            </Card>
+          );
+        })}
+      </div>
+
+      {/* CTA */}
+      <div className="mt-16 text-center">
+        <Typography variant="body" className="text-primary/70 mb-6">
+          Ready to transform your business operations?
+        </Typography>
+        <a
+          href="/register"
+          className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-200"
+        >
+          Start Free Trial
+        </a>
+      </div>
+    </Section>
+  );
 }
 
 export default FeatureSection
