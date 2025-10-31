@@ -21,6 +21,7 @@ import {
   CheckCircle
 } from 'lucide-react'
 import Link from 'next/link'
+import InventoryList from './components/InventoryList';
 
 type PlanType = 'starter' | 'professional' | 'enterprise'
 
@@ -179,6 +180,12 @@ export default function DashboardPage() {
                 </div>
               )
             })}
+          </div>
+
+          {/* Inventory Table */}
+          <div className="mb-8">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">Inventory</h2>
+            <InventoryList />
           </div>
 
           {/* Chart Area */}

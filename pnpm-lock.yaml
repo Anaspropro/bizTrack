@@ -20,6 +20,9 @@ importers:
       '@dataui/crud':
         specifier: ^5.3.4
         version: 5.3.4(class-transformer@0.5.1)(class-validator@0.14.2)
+      '@dataui/crud-typeorm':
+        specifier: ^5.3.4
+        version: 5.3.4
       '@nestjs/cache-manager':
         specifier: ^3.0.1
         version: 3.0.1(@nestjs/common@11.1.6(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.6)(cache-manager@5.7.6)(keyv@4.5.4)(rxjs@7.8.2)
@@ -160,8 +163,8 @@ importers:
         specifier: ^5.3.4
         version: 5.3.4(class-transformer@0.5.1)(class-validator@0.14.2)
       aos:
-        specifier: ^2.3.4
-        version: 2.3.4
+        specifier: 3.0.0-beta.6
+        version: 3.0.0-beta.6
       axios:
         specifier: ^1.12.2
         version: 1.12.2
@@ -862,6 +865,9 @@ packages:
 
   '@dataui/crud-request@5.3.4':
     resolution: {integrity: sha512-Q8hvGQppeWtKZdCe6h414M7jgvuX4cNplnQRlWCCR4rOnSYjWcQV5aJlbEaSC3oNCzb5WZJs7SSf7fF/JV9KMA==}
+
+  '@dataui/crud-typeorm@5.3.4':
+    resolution: {integrity: sha512-rFIop8t2K/Y4YuifjWbuiSybAm+4s8jSlcGkn/f2Q2GmPKGt0xDkg56UBJ9m0kvqejYtT4lUcUz4d5cG6/RgpA==}
 
   '@dataui/crud-util@5.3.4':
     resolution: {integrity: sha512-NAJ/KQshpttB/k8V72tpOIcfgZ/KINivfLq5T3Wyy7BKU6cARYzuE4gHSWjSM5WcyavHr9tBaodTAoNd7j+KiA==}
@@ -2325,6 +2331,9 @@ packages:
   '@xtuc/long@4.2.2':
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
+  '@zmotivat0r/o0@1.0.2':
+    resolution: {integrity: sha512-wQ/sHqJEtYb+QtgxtWlBpGASFZ2avpoRWbvpginEuy7howZHTZTy3zYMRMaBKok4bZwIGU5bjmzE59+m1IWqKQ==}
+
   accepts@2.0.0:
     resolution: {integrity: sha512-5cvg6CtKwfgdmVqY1WIiXKc3Q1bkRqGLi+2W/6ao+6Y7gu/RCwRuAhGEzh5B4KlszSuTLgZYuqFqo5bImjNKng==}
     engines: {node: '>= 0.6'}
@@ -2421,8 +2430,8 @@ packages:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
 
-  aos@2.3.4:
-    resolution: {integrity: sha512-zh/ahtR2yME4I51z8IttIt4lC1Nw0ktsFtmeDzID1m9naJnWXhCoARaCgNOGXb5CLy3zm+wqmRAEgMYB5E2HUw==}
+  aos@3.0.0-beta.6:
+    resolution: {integrity: sha512-VLWrpq8bfAWcetynVHMMrqdC+89Qq/Ym6UBJbHB4crIwp3RR8uq1dNGgsFzoDl03S43rlVMK+na3r5+oUCZsYw==}
 
   app-root-path@3.1.0:
     resolution: {integrity: sha512-biN3PwB2gUtjaYy/isrU3aNWI5w+fAfvHkSvCKeQGxhmYpwKFUxudR3Yya+KqVRHBmEDYh+/lTozYCFbmzX4nA==}
@@ -6733,6 +6742,10 @@ snapshots:
       '@dataui/crud-util': 5.3.4
       qs: 6.14.0
 
+  '@dataui/crud-typeorm@5.3.4':
+    dependencies:
+      '@zmotivat0r/o0': 1.0.2
+
   '@dataui/crud-util@5.3.4': {}
 
   '@dataui/crud@5.3.4(class-transformer@0.5.1)(class-validator@0.14.2)':
@@ -8319,6 +8332,8 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
+  '@zmotivat0r/o0@1.0.2': {}
+
   accepts@2.0.0:
     dependencies:
       mime-types: 3.0.1
@@ -8396,7 +8411,7 @@ snapshots:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
-  aos@2.3.4:
+  aos@3.0.0-beta.6:
     dependencies:
       classlist-polyfill: 1.2.0
       lodash.debounce: 4.0.8

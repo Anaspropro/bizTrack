@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@dataui/crud": "^5.3.4",
+    "@dataui/crud-typeorm": "^5.3.4",
     "@nestjs/cache-manager": "^3.0.1",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.2",

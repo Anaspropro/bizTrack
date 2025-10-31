@@ -3,3 +3,4 @@ export { default as FeaturesSection } from "./FeatureSection";
 export { default as PricingSection } from "./PricingSection";
 export { default as TestimonialsSection } from "./TestimonialsSection";
 export { default as ContactSection } from "./ContactSection";
+export { default as AOSInit } from "./AOSinit"

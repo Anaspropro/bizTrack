@@ -7,11 +7,13 @@ const AOSInit = () => {
   useEffect(() => {
     // Only import and initialize AOS on the client side after mount
     const initAOS = async () => {
+      if (typeof window === "undefined") return;
       const AOS = (await import("aos")).default;
-      AOS.init({
-        duration: 800,
-        easing: "ease-in-out",
-        once: true,
+      if (AOS && typeof AOS.init === "function") {
+        AOS.init({
+          duration: 800,
+          easing: "ease-in-out",
+          once: true,
         mirror: false,
         disable: false,
       });
